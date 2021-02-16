@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Calc">
-        <activity android:name=".calculator"></activity>
+        <activity android:name=".images.SharkActivity"></activity>
+        <activity android:name=".images.GoatActivity" />
+        <activity android:name=".images.HorseActivity" />
+        <activity android:name=".images.MouseActivity" />
+        <activity android:name=".images.CatActivity" />
+        <activity android:name=".ImageViewActivity" />
+        <activity android:name=".ActivityCalculator" />
+        <activity android:name=".CalculatorActivity" />
+        <activity android:name=".calculator" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

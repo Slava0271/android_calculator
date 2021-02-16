@@ -2,31 +2,39 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/primary"
+    android:id="@+id/main_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="16dp">
+        tools:layout_editor_absoluteX="-52dp"
+        tools:layout_editor_absoluteY="-281dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <Switch
+                android:id="@+id/switchChangeColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:textOff="OFF"
+                android:textOn="On" />
+
             <Button
-                android:onClick="toCalculator"
                 android:id="@+id/calculator"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:insetLeft="20dp"
                 android:insetTop="50dp"
                 android:insetRight="20dp"
-                android:text="Calculator"
+                android:text="@string/calculator"
                 app:backgroundTint="@color/secondary" />
 
             <Button
@@ -36,7 +44,7 @@
                 android:insetLeft="20dp"
                 android:insetTop="100dp"
                 android:insetRight="20dp"
-                android:text="Images"
+                android:text="@string/images"
                 app:backgroundTint="@color/secondary" />
 
 
