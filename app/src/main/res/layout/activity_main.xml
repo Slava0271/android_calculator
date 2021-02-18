@@ -22,10 +22,11 @@
             <Switch
                 android:id="@+id/switchChangeColor"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="0"
-                android:textOff="OFF"
-                android:textOn="On" />
+                android:textOff="@string/off"
+                android:textOn="@string/on"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
 
             <Button
                 android:id="@+id/calculator"
@@ -35,7 +36,7 @@
                 android:insetTop="50dp"
                 android:insetRight="20dp"
                 android:text="@string/calculator"
-                app:backgroundTint="@color/secondary" />
+                app:backgroundTint="@color/button_color" />
 
             <Button
                 android:id="@+id/images"
@@ -45,7 +46,7 @@
                 android:insetTop="100dp"
                 android:insetRight="20dp"
                 android:text="@string/images"
-                app:backgroundTint="@color/secondary" />
+                app:backgroundTint="@color/button_color" />
 
 
         </LinearLayout>

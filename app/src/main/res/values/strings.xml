@@ -25,4 +25,8 @@
     <string name="power">^</string>
     <string name="plus">+</string>
     <string name="_9">9</string>
+    <string name="off">OFF</string>
+    <string name="on">On</string>
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
 </resources>

@@ -16,9 +16,9 @@
         android:layout_marginTop="294dp"
         android:layout_marginEnd="27dp"
         android:layout_marginRight="27dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
+        app:backgroundTint="@color/button_color"
         android:text="@string/_9"
-        app:backgroundTint="@color/secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -29,9 +29,9 @@
         android:layout_marginTop="364dp"
         android:layout_marginEnd="27dp"
         android:layout_marginRight="27dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/plus"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -42,9 +42,9 @@
         android:layout_marginTop="432dp"
         android:layout_marginEnd="27dp"
         android:layout_marginRight="27dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/power"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -57,9 +57,9 @@
         android:layout_marginTop="292dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
+        app:backgroundTint="@color/button_color"
         android:text="@string/_8"
-        app:backgroundTint="@color/secondary"
         app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintStart_toEndOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -73,9 +73,10 @@
         android:layout_marginTop="364dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
+        app:backgroundTint="@color/button_color"
+
         android:text="@string/_0"
-        app:backgroundTint="@color/secondary"
         app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintStart_toEndOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -89,9 +90,9 @@
         android:layout_marginTop="434dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/div"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintStart_toEndOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -103,9 +104,9 @@
         android:layout_marginStart="27dp"
         android:layout_marginLeft="27dp"
         android:layout_marginTop="294dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/_7"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -116,9 +117,9 @@
         android:layout_marginTop="224dp"
         android:layout_marginEnd="27dp"
         android:layout_marginRight="27dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/_6"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -131,9 +132,9 @@
         android:layout_marginTop="224dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/_5"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -147,9 +148,9 @@
         android:layout_marginTop="154dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/_2"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -163,9 +164,9 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/c"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toEndOf="@+id/button1"
@@ -194,9 +195,9 @@
         android:layout_marginStart="27dp"
         android:layout_marginLeft="27dp"
         android:layout_marginTop="154dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/_1"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -207,9 +208,9 @@
         android:layout_marginStart="27dp"
         android:layout_marginLeft="27dp"
         android:layout_marginTop="84dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/count"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -220,9 +221,9 @@
         android:layout_marginStart="27dp"
         android:layout_marginLeft="27dp"
         android:layout_marginTop="364dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/Minus"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -233,9 +234,9 @@
         android:layout_marginStart="27dp"
         android:layout_marginLeft="27dp"
         android:layout_marginTop="434dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/Calc"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -246,9 +247,9 @@
         android:layout_marginStart="27dp"
         android:layout_marginLeft="27dp"
         android:layout_marginTop="224dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/_4"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -259,9 +260,9 @@
         android:layout_marginTop="154dp"
         android:layout_marginEnd="27dp"
         android:layout_marginRight="27dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/_3"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -272,9 +273,9 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="27dp"
         android:layout_marginRight="27dp"
-        android:background="@color/secondary"
+        android:background="@color/button_color"
         android:text="@string/clear"
-        app:backgroundTint="@color/secondary"
+        app:backgroundTint="@color/button_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 

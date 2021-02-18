@@ -7,15 +7,14 @@ import android.view.View
 import android.widget.Button
 import com.example.calc.calculator.Calculator
 import kotlinx.android.synthetic.main.activity_calculator.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class ActivityCalculator : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculator)
-        setListenersForAllButtons()
-        val changeActivityColors:ChangeActivityColors = ChangeActivityColors()
-        if(SwitchStatus.isSwitchButton())
+        addListenersForAllButton()
+        val changeActivityColors: ChangeActivityColors = ChangeActivityColors()
+        if (SwitchStatus.isSwitchButton())
             changeActivityColors.changeToLightTheme(activity_calculator)
         else changeActivityColors.changeToDarkTheme(activity_calculator)
 
@@ -23,10 +22,8 @@ class ActivityCalculator : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     fun setTextViewField(view: View) {
-        view.setOnClickListener() {
-            val buttonText = view as Button
-            textView.text = textView.text.toString() + buttonText.text
-        }
+        val buttonText = view as Button
+        textView.text = textView.text.toString() + buttonText.text
     }
 
     private fun clearTextField() {
@@ -42,7 +39,7 @@ class ActivityCalculator : AppCompatActivity() {
         }
     }
 
-    private fun getResult() {
+    private fun countResultAndPrintToDisplay() {
         buttonResult.setOnClickListener {
             val calc: Calculator = Calculator()
             val numbers: Array<String> = arrayOf(textView.text.toString())
@@ -50,25 +47,54 @@ class ActivityCalculator : AppCompatActivity() {
         }
     }
 
-    private fun setListenersForAllButtons() {
-        setTextViewField(button1)
-        setTextViewField(button2)
-        setTextViewField(button3)
-        setTextViewField(button4)
-        setTextViewField(button5)
-        setTextViewField(button6)
-        setTextViewField(button7)
-        setTextViewField(button8)
-        setTextViewField(button9)
-        setTextViewField(buttonMinus)
-        setTextViewField(buttonZero)
-        setTextViewField(buttonPlus)
-        setTextViewField(buttonMultiply)
-        setTextViewField(buttonDiv)
-        setTextViewField(buttonPower)
+    fun addListenersForAllButton() {
+        val listOfButtons: ArrayList<View> = arrayListOf<View>(
+                button1,
+                button2,
+                button3,
+                button4,
+                button5,
+                button6,
+                button7,
+                button8,
+                button9,
+                buttonMinus,
+                buttonZero,
+                buttonPlus,
+                buttonMultiply,
+                buttonDiv,
+                buttonPower
+        )
+
         clearTextField()
         clearLastChar()
-        getResult()
-
+        countResultAndPrintToDisplay()
+        listOfButtons.forEach { v ->
+            v.setOnClickListener(setTextListeners())
+        }
     }
+
+
+    private fun setTextListeners(): View.OnClickListener {
+        return View.OnClickListener { v ->
+            when (v) {
+                button1 -> setTextViewField(button1)
+                button2 -> setTextViewField(button2)
+                button3 -> setTextViewField(button3)
+                button4 -> setTextViewField(button4)
+                button5 -> setTextViewField(button5)
+                button6 -> setTextViewField(button6)
+                button7 -> setTextViewField(button7)
+                button8 -> setTextViewField(button8)
+                button9 -> setTextViewField(button9)
+                buttonMinus -> setTextViewField(buttonMinus)
+                buttonZero -> setTextViewField(buttonZero)
+                buttonPlus -> setTextViewField(buttonPlus)
+                buttonMultiply -> setTextViewField(buttonMultiply)
+                buttonDiv -> setTextViewField(buttonDiv)
+                buttonPower -> setTextViewField(buttonPower)
+            }
+        }
+    }
+
 }
