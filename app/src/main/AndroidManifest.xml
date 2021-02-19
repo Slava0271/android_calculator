@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Calc">
-        <activity android:name=".images.SharkActivity"></activity>
+        <activity android:name=".MainActivityNight"></activity>
+        <activity android:name=".images.SharkActivity" />
         <activity android:name=".images.GoatActivity" />
         <activity android:name=".images.HorseActivity" />
         <activity android:name=".images.MouseActivity" />

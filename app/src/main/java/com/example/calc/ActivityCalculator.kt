@@ -12,6 +12,7 @@ class ActivityCalculator : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculator)
+        supportActionBar?.hide()
         addListenersForAllButton()
         val changeActivityColors: ChangeActivityColors = ChangeActivityColors()
         if (SwitchStatus.isSwitchButton())
