@@ -3,11 +3,11 @@ package com.example.calc.calculator;
 import java.util.HashMap;
 
 /**
- *   An abstract class in which many checks
- *   are implemented in order to
- *   successfully parse the expression
+ * An class in which many checks
+ * are implemented in order to
+ * successfully parse the expression
  */
-abstract class Checks {
+public class Checks {
     /**
      * A method that checks if the given parameter
      * is in the map or not, and returns true if yes
@@ -15,9 +15,9 @@ abstract class Checks {
      * @param map   - hashMap with parameters
      * @param chars - character array
      * @param i     - count
-     * @return - return true or false
+     * @return - return true if character contains in map
      */
-    protected static boolean isThereKey(HashMap<String, Double> map, char[] chars, int i) {
+    static boolean isThereKey(HashMap<String, Double> map, char[] chars, int i) {
         return map.containsKey(Character.toString(chars[i]));
     }
 
@@ -28,9 +28,9 @@ abstract class Checks {
      * @param stringBuilder - input string
      * @param chars         - character array
      * @param i             - count
-     * @return - true or false
+     * @return - return true if string empty or char = .
      */
-    protected static boolean checkString(StringBuilder stringBuilder, char[] chars, int i) {
+    static boolean checkString(StringBuilder stringBuilder, char[] chars, int i) {
         return stringBuilder.toString().isEmpty() || chars[i] == '.';
     }
 
@@ -38,9 +38,9 @@ abstract class Checks {
      * Method that checks if a character is a number
      *
      * @param ch - character
-     * @return - true or false
+     * @return - return true if character digit
      */
-    protected static boolean isDigit(char ch) {
+    static boolean isDigit(char ch) {
         return Character.isDigit(ch);
     }
 
@@ -48,9 +48,9 @@ abstract class Checks {
      * Method that returns true if character is an operator
      *
      * @param ch - symbol
-     * @return - true or false
+     * @return - return true if character is operation
      */
-    protected static boolean isOperation(char ch) {
+    public static boolean isOperation(char ch) {
         return ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^';
     }
 
@@ -60,9 +60,9 @@ abstract class Checks {
      *
      * @param chars - chars array
      * @param i     - counter
-     * @return - true or false
+     * @return - return true if parameter i its end of string
      */
-    protected static boolean isLastCharacter(char[] chars, int i) {
+    static boolean isLastCharacter(char[] chars, int i) {
         return i == chars.length - 1;
     }
 
@@ -71,9 +71,9 @@ abstract class Checks {
      *
      * @param i     - count
      * @param chars - character array
-     * @return true or false
+     * @return return true if bracket is close
      */
-    protected static boolean isCloseBracket(int i, char[] chars) {
+    static boolean isCloseBracket(int i, char[] chars) {
         return i < chars.length - 1 && chars[i + 1] != ')';
     }
 }

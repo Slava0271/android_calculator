@@ -3,17 +3,24 @@ package com.example.calc
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import com.example.calc.calculator.Calculator
 import kotlinx.android.synthetic.main.activity_calculator.*
 
 class ActivityCalculator : AppCompatActivity() {
+    private var errorMessage: String = "Ошибка"
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculator)
         supportActionBar?.hide()
         addListenersForAllButton()
+        addTextListener()
         val changeActivityColors: ChangeActivityColors = ChangeActivityColors()
         if (SwitchStatus.isSwitchButton())
             changeActivityColors.changeToLightTheme(activity_calculator)
@@ -22,33 +29,31 @@ class ActivityCalculator : AppCompatActivity() {
     }
 
     @SuppressLint("SetTextI18n")
-    fun setTextViewField(view: View) {
-        val buttonText = view as Button
-        textView.text = textView.text.toString() + buttonText.text
+    fun updateTextView(button: Button, view: TextView) {
+        view.text = view.text.toString() + button.text
     }
 
-    private fun clearTextField() {
+    private fun initListenerForClearTextField() {
         buttonСlear.setOnClickListener {
             textView.text = ""
         }
     }
 
-    private fun clearLastChar() {
+    private fun addListenerForDeleteLastChar() {
         buttonC.setOnClickListener {
             if (textView.text.isNotEmpty())
                 textView.text = textView.text.substring(0, textView.text.length - 1)
         }
     }
 
-    private fun countResultAndPrintToDisplay() {
-        buttonResult.setOnClickListener {
-            val calc: Calculator = Calculator()
-            val numbers: Array<String> = arrayOf(textView.text.toString())
-            textView.text = calc.count(numbers).toString()
-        }
-    }
+//    private fun addListenerToPrintResultOnTextField() {
+//        val errorMessage: String = "Ошибка"
+//        buttonResult.setOnClickListener {
+//            countResult()
+//        }
+//    }
 
-    fun addListenersForAllButton() {
+    private fun addListenersForAllButton() {
         val listOfButtons: ArrayList<View> = arrayListOf<View>(
                 button1,
                 button2,
@@ -66,36 +71,50 @@ class ActivityCalculator : AppCompatActivity() {
                 buttonDiv,
                 buttonPower
         )
-
-        clearTextField()
-        clearLastChar()
-        countResultAndPrintToDisplay()
         listOfButtons.forEach { v ->
-            v.setOnClickListener(setTextListeners())
+            v.setOnClickListener(addButtonListener())
         }
+
+        initListenerForClearTextField()
+        addListenerForDeleteLastChar()
+        // addListenerToPrintResultOnTextField()
+
     }
 
 
-    private fun setTextListeners(): View.OnClickListener {
+    @SuppressLint("ShowToast", "ResourceType")
+    private fun addButtonListener(): View.OnClickListener {
         return View.OnClickListener { v ->
-            when (v) {
-                button1 -> setTextViewField(button1)
-                button2 -> setTextViewField(button2)
-                button3 -> setTextViewField(button3)
-                button4 -> setTextViewField(button4)
-                button5 -> setTextViewField(button5)
-                button6 -> setTextViewField(button6)
-                button7 -> setTextViewField(button7)
-                button8 -> setTextViewField(button8)
-                button9 -> setTextViewField(button9)
-                buttonMinus -> setTextViewField(buttonMinus)
-                buttonZero -> setTextViewField(buttonZero)
-                buttonPlus -> setTextViewField(buttonPlus)
-                buttonMultiply -> setTextViewField(buttonMultiply)
-                buttonDiv -> setTextViewField(buttonDiv)
-                buttonPower -> setTextViewField(buttonPower)
-            }
+            updateTextView(v as Button, textView)
         }
+    }
+
+    private fun addTextListener() {
+        textView.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+//                val inputText: String = textView.text.toString()
+//                buttonResult.isClickable = inputText.isNotEmpty()
+                countResult()
+            }
+        })
+
+    }
+
+    private fun countResult() {
+        val calc: Calculator = Calculator()
+        val errorChecking: ErrorChecking = ErrorChecking(textView.text.toString())
+        val numbers: Array<String> = arrayOf(textView.text.toString())
+        if (errorChecking.isIntroducedOperator && errorChecking.isTwoCharInRow
+                && errorChecking.isLastCharNotOperator)
+            textViewResult.text = calc.count(numbers).toString()
+        else textViewResult.text = errorMessage
     }
 
 }
+

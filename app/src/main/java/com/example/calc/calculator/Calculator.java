@@ -9,15 +9,12 @@ import java.util.Stack;
  * trigonometric functions
  */
 
-public class Calculator extends Checks {
+public class Calculator  {
     //The stack in which numbers are stored
     private static Stack<Double> numbers = new Stack<>();
     //The stack in which operations are stored
     private static Stack<Character> operations = new Stack<>();
 
-    public static void main(String[] args) {
-        System.out.println(new Calculator().count(args));
-    }
     /**
      * The method that tries to call the method
      * that will calculate the expression,
