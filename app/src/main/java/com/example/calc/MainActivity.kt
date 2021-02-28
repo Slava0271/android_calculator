@@ -1,10 +1,15 @@
 package com.example.calc
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.calc.R
+import com.example.calc.part2_calculator.ActivityCalculator
+import com.example.calc.part3_images.ChangeImageColorActivity
+import com.example.calc.part3_images.ImageViewActivity
+import com.example.calc.part4_title.TitleActivity
+import com.example.calc.part8_change_color.ChangeActivityColors
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,14 +22,26 @@ class MainActivity : AppCompatActivity() {
         images.setOnClickListener {
             toViewActivity(images)
         }
-        val changeActivityColors:ChangeActivityColors = ChangeActivityColors()
+        changeImageColorButton.setOnClickListener {
+            toTitles()
+        }
+        changeImageColorButton.setOnClickListener {
+            toChangeImageColor()
+        }
+        val changeActivityColors: ChangeActivityColors = ChangeActivityColors()
         changeActivityColors.listenSwitchButton(switchChangeColor,main_activity)
 
     }
     private fun toCalculator (view:View) {
-        startActivity(Intent(this,ActivityCalculator::class.java))
+        startActivity(Intent(this, ActivityCalculator::class.java))
     }
     private fun toViewActivity(view:View){
-        startActivity(Intent(this,ImageViewActivity::class.java))
+        startActivity(Intent(this, ImageViewActivity::class.java))
+    }
+    private fun toTitles (){
+        startActivity(Intent(this, TitleActivity::class.java))
+    }
+    private fun toChangeImageColor(){
+        startActivity(Intent(this, ChangeImageColorActivity::class.java))
     }
 }

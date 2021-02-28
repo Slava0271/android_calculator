@@ -5,7 +5,7 @@
     android:id="@+id/activity_calculator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
+    android:background="@color/light"
     tools:context=".ActivityCalculator">
 
 
@@ -18,7 +18,7 @@
         android:layout_marginTop="10dp"
         android:background="#FFc8c2af"
         android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/inputFunction"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -33,7 +33,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/buttonPlus"
@@ -47,7 +47,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/buttonZero"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/buttonPower"
@@ -61,7 +61,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/button8"
@@ -75,7 +75,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/buttonZero"
@@ -90,7 +90,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/buttonDiv"
@@ -104,7 +104,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/button7"
@@ -118,7 +118,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/button6"
@@ -132,7 +132,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/button5"
@@ -146,7 +146,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/button2"
@@ -160,7 +160,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/buttonC"
@@ -174,10 +174,10 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/buttonСlear"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/inputFunction"
         android:layout_width="220dp"
         android:layout_height="35dp"
         android:layout_marginStart="100dp"
@@ -200,7 +200,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/buttonMinus"
@@ -214,7 +214,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/buttonDiv"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/buttonMultiply"
@@ -228,7 +228,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/buttonMinus"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/button4"
@@ -242,7 +242,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/button3"
@@ -256,7 +256,7 @@
         android:textSize="20sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
     <Button
         android:id="@+id/buttonСlear"
@@ -270,6 +270,6 @@
         android:textSize="15sp"
         app:backgroundTint="@color/button_color"
         app:layout_constraintStart_toEndOf="@+id/buttonPower"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/inputFunction" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

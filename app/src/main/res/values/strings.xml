@@ -16,6 +16,7 @@
     <string name="_1">1</string>
     <string name="c">C</string>
     <string name="_2">2</string>
+    <string name="error_message">Ошибка</string>
     <string name="_5">5</string>
     <string name="_6">6</string>
     <string name="_7">7</string>
@@ -29,4 +30,10 @@
     <string name="on">On</string>
     <string name="prev">Prev</string>
     <string name="next">Next</string>
+    <string name="title_1">Title 1</string>
+    <string name="title_2">Title 2</string>
+    <string name="hello_username"><![CDATA[Hello, <UserName>]]></string>
+    <string name="title_3">   Title 3</string>
+    <string name="title4">title4</string>
+    <string name="title6">title6</string>
 </resources>

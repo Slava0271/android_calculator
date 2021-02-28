@@ -5,7 +5,6 @@
     android:id="@+id/main_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -46,6 +45,25 @@
                 android:insetTop="100dp"
                 android:insetRight="20dp"
                 android:text="@string/images"
+                app:backgroundTint="@color/button_color" />
+
+            <Button
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:insetLeft="20dp"
+                android:insetTop="100dp"
+                android:insetRight="20dp"
+                android:text="titles"
+                app:backgroundTint="@color/button_color" />
+            <Button
+                android:id="@+id/changeImageColorButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:insetLeft="20dp"
+                android:insetTop="100dp"
+                android:insetRight="20dp"
+                android:text="Change image color"
                 app:backgroundTint="@color/button_color" />
 
 

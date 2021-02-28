@@ -1,17 +1,18 @@
-package com.example.calc
+package com.example.calc.part3_images
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import com.example.calc.R
+import com.example.calc.part8_change_color.ChangeActivityColors
+import com.example.calc.part8_change_color.SwitchStatus
 import kotlinx.android.synthetic.main.activity_image_view.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class ImageViewActivity : AppCompatActivity() {
     var count = 0;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_image_view)
+        supportActionBar?.hide()
         drawFirstImage()
         buttonListeners()
 
@@ -23,7 +24,7 @@ class ImageViewActivity : AppCompatActivity() {
     }
 
     private fun drawFirstImage() {
-        imageView.setImageResource(R.drawable.cat)
+        imageViewChangeColor.setImageResource(R.drawable.cat)
     }
 
     private fun buttonListeners() {
@@ -42,11 +43,11 @@ class ImageViewActivity : AppCompatActivity() {
 
     private fun setImages(){
         when (count) {
-            0 -> imageView.setImageResource(R.drawable.cat)
-            1 -> imageView.setImageResource(R.drawable.shark)
-            2 -> imageView.setImageResource(R.drawable.mouse)
-            3 -> imageView.setImageResource(R.drawable.goat)
-            4 -> imageView.setImageResource(R.drawable.horse)
+            0 -> imageViewChangeColor.setImageResource(R.drawable.cat)
+            1 -> imageViewChangeColor.setImageResource(R.drawable.shark)
+            2 -> imageViewChangeColor.setImageResource(R.drawable.mouse)
+            3 -> imageViewChangeColor.setImageResource(R.drawable.goat)
+            4 -> imageViewChangeColor.setImageResource(R.drawable.horse)
         }
     }
 
