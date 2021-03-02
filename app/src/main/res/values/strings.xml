@@ -1,4 +1,6 @@
 <resources>
+    <string name="mouse_img">https://www.jax.org/-/media/jaxweb/images/why-the-mouse/mouse.jpg</string>
+    <string name="goat_img">https://www.gardeningknowhow.com/wp-content/uploads/2010/02/iStock-524907632.jpg</string>
     <string name="app_name">Lesson1</string>
     <string name="calculator">Calculator</string>
     <string name="cat">Cat</string>
@@ -36,4 +38,12 @@
     <string name="title_3">   Title 3</string>
     <string name="title4">title4</string>
     <string name="title6">title6</string>
+
+    <string-array name="transformation">
+        <item>No transformation</item>
+        <item>Blur transformation</item>
+        <item>Mask transformation</item>
+        <item>Color Filter Transformation</item>
+        <item>Животное</item>
+    </string-array>
 </resources>
