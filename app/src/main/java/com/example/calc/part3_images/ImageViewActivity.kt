@@ -1,35 +1,28 @@
 package com.example.calc.part3_images
 
-import android.annotation.SuppressLint
-import android.media.projection.MediaProjectionManager
-import android.media.session.MediaSessionManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ImageView
-import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.calc.R
 import com.example.calc.part8_change_color.ChangeActivityColors
 import com.example.calc.part8_change_color.SwitchStatus
-import jp.wasabeef.glide.transformations.BlurTransformation
-import jp.wasabeef.glide.transformations.GrayscaleTransformation
-import jp.wasabeef.glide.transformations.MaskTransformation
+import jp.wasabeef.glide.transformations.*
 import kotlinx.android.synthetic.main.activity_image_view.*
-import java.lang.NullPointerException
 
 class ImageViewActivity : AppCompatActivity() {
+    var getPosition = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_image_view)
         supportActionBar?.hide()
+        buttonListeners()
         addSpinner()
         ifItemSelected()
-        drawFirstImage()
-        buttonListeners()
 
         val changeActivityColors: ChangeActivityColors = ChangeActivityColors()
         if (SwitchStatus.isSwitchButton())
@@ -38,46 +31,56 @@ class ImageViewActivity : AppCompatActivity() {
 
     }
 
-    private fun drawFirstImage() {
-        imageViewChangeColor.setImageResource(R.drawable.cat)
-    }
 
+    /**
+     * The method in which the logic of
+     * switching images is implemented
+     */
     private fun buttonListeners() {
         var count = 0;
         buttonNext.setOnClickListener {
             if (count < 5)
                 count++
-            setImages(count)
+            setImagesAndTransformation(count)
         }
 
         buttonPrev.setOnClickListener {
             if (count > 0)
                 count--
-            setImages(count)
+            setImagesAndTransformation(count)
         }
     }
 
-    private fun setImages(count: Int) {
+    /**
+     *A method in which, depending on the count parameter,
+     * the image changes, and the transformation is applied
+     */
+    private fun setImagesAndTransformation(count: Int) {
         when (count) {
             0 -> {
                 imageViewChangeColor.setImageResource(R.drawable.cat)
                 imageViewChangeColor.tag = "cat"
+                transformation(getPosition)
             }
             1 -> {
                 imageViewChangeColor.setImageResource(R.drawable.shark)
                 imageViewChangeColor.tag = "shark"
+                transformation(getPosition)
             }
             2 -> {
                 loadImageFromURL(getString(R.string.mouse_img), imageViewChangeColor)
                 imageViewChangeColor.tag = "mouse"
+                transformation(getPosition)
             }
             3 -> {
                 loadImageFromURL(getString(R.string.goat_img), imageViewChangeColor)
                 imageViewChangeColor.tag = "goat"
+                transformation(getPosition)
             }
             4 -> {
                 imageViewChangeColor.setImageResource(R.drawable.horse)
                 imageViewChangeColor.tag = "horse"
+                transformation(getPosition)
             }
         }
     }
@@ -88,28 +91,39 @@ class ImageViewActivity : AppCompatActivity() {
     }
 
     private fun ifItemSelected() {
-        var selectedItem:Int =0
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                if(selectedItem==1)
-                    blurTransformation()
-                if(selectedItem==2)
-                    grayscaleTransformation()
 
             }
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                selectedItem=position
-                //  2 -> grayscaleTransformation()
-                if (position == 1)
-                    blurTransformation()
-                else if (position == 2)
-                    grayscaleTransformation()
+                getPosition = position
+                transformation(position)
             }
 
         }
     }
 
+    /**
+     * Depending on the position of the spinner,
+     * a transformation is selected
+     */
+    private fun transformation(position: Int) {
+        if (position == 1)
+            blurTransformation()
+        else if (position == 2)
+            grayscaleTransformation()
+        else if (position == 3)
+            roundedCornersTransformation()
+        else if (position == 4)
+            colorFilterTransformation()
+        else if (position == 0)
+            noTransformation()
+    }
+
+    /**
+     * A method that returns an image depending on the tag
+     */
     private fun getTag(): Any {
         var any: Any = ""
 
@@ -135,6 +149,22 @@ class ImageViewActivity : AppCompatActivity() {
                 .into(imageViewChangeColor)
     }
 
+    private fun roundedCornersTransformation() {
+        Glide.with(this).load(getTag())
+                .apply(RequestOptions.bitmapTransform(RoundedCornersTransformation(90, 90)))
+                .into(imageViewChangeColor)
+    }
+
+    private fun colorFilterTransformation() {
+        Glide.with(this).load(getTag())
+                .apply(RequestOptions.bitmapTransform(CropCircleTransformation()))
+                .into(imageViewChangeColor)
+    }
+
+    private fun noTransformation() {
+        Glide.with(this).load(getTag()).into(imageViewChangeColor)
+    }
+
     private fun addSpinner() {
         val arrayAdapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(
                 this, R.array.transformation, android.R.layout.simple_spinner_item
@@ -142,5 +172,5 @@ class ImageViewActivity : AppCompatActivity() {
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = arrayAdapter
     }
-
+    
 }
