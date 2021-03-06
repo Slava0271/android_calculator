@@ -38,12 +38,18 @@
     <string name="title_3">   Title 3</string>
     <string name="title4">title4</string>
     <string name="title6">title6</string>
+    <string name="titles">Titles</string>
 
     <string-array name="transformation">
         <item>No transformation</item>
         <item>Blur transformation</item>
-        <item>Mask transformation</item>
-        <item>Color Filter Transformation</item>
-        <item>Животное</item>
+        <item>Grayscale Transformation</item>
+        <item>Rounded Corners Transformation</item>
+        <item>Circle Transformation</item>
     </string-array>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>
