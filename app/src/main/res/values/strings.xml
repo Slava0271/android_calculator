@@ -36,9 +36,11 @@
     <string name="title_2">Title 2</string>
     <string name="hello_username"><![CDATA[Hello, <UserName>]]></string>
     <string name="title_3">   Title 3</string>
-    <string name="title4">title4</string>
-    <string name="title6">title6</string>
+    <string name="title4">Title4</string>
+    <string name="title6">Title6</string>
     <string name="titles">Titles</string>
+    <string name="title5">Title5</string>
+
 
     <string-array name="transformation">
         <item>No transformation</item>

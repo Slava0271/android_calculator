@@ -6,155 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".part4_title.TitleActivity">
 
-    <Button
-        android:id="@+id/title6"
-        android:layout_width="120dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="19dp"
-        android:text="@string/title6"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:backgroundTint="@color/purple_200"
-        app:iconSize="50dp"
-        app:iconTint="@color/material_on_primary_emphasis_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title5"
-        tools:ignore="RtlHardcoded" />
-
-    <Button
-        android:id="@+id/title5"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        app:icon="@android:drawable/ic_menu_close_clear_cancel"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="left|center_vertical"
-        android:text="title5"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:backgroundTint="@color/purple_200"
-        app:iconSize="50dp"
-        app:iconTint="@color/material_on_primary_emphasis_medium"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="#15AA9C"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title4"
-        tools:ignore="RtlHardcoded" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-    <Button
-        android:id="@+id/title8"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="left|center_vertical"
-        android:text="title5"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:backgroundTint="@color/purple_200"
-        app:icon="@android:drawable/ic_menu_close_clear_cancel"
-        app:iconSize="50dp"
-        app:iconTint="@color/material_on_primary_emphasis_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title4"
-        tools:ignore="RtlHardcoded" />
+        <ImageView
+            android:id="@+id/imageViewTitle2"
+            android:layout_width="63dp"
+            android:layout_height="67dp"
+            android:hapticFeedbackEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
-    <Button
-        android:id="@+id/title7"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="left|center_vertical"
-        android:text="title7"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:backgroundTint="@color/purple_200"
-        app:icon="@android:drawable/ic_menu_close_clear_cancel"
-        app:iconSize="50dp"
-        app:iconTint="@color/material_on_primary_emphasis_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title5"
-        tools:ignore="RtlHardcoded" />
-
-    <Button
-        android:id="@+id/title4"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="left|center_vertical"
-        android:text="title4"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:backgroundTint="@color/purple_200"
-        app:icon="@android:drawable/ic_menu_close_clear_cancel"
-        app:iconSize="50sp"
-        app:iconTint="@color/material_on_primary_emphasis_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title3"
-        tools:ignore="RtlHardcoded" />
-
-    <Button
-        android:id="@+id/button"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="100dp"
-        android:text="@string/title_1"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/purple_200"
-        app:icon="@android:drawable/ic_menu_close_clear_cancel"
-        app:iconGravity="top"
-        app:iconSize="50dp"
-        app:iconTint="@color/material_on_primary_emphasis_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button10"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:text="@string/title_2"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/purple_200"
-        app:icon="@android:drawable/ic_menu_close_clear_cancel"
-        app:iconGravity="top"
-        app:iconSize="50dp"
-        app:iconTint="@color/material_on_primary_emphasis_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/title2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/title_2"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewTitle2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textViewResult"
@@ -193,7 +74,7 @@
         app:srcCompat="@android:drawable/ic_popup_reminder" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageViewAvatar"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="5dp"
@@ -203,28 +84,196 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@android:drawable/ic_menu_camera" />
 
-    <Button
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:background="#15AA9C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <ImageView
+            android:id="@+id/imageViewTitle1"
+            android:layout_width="63dp"
+            android:layout_height="67dp"
+            android:hapticFeedbackEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <TextView
+            android:id="@+id/title1Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/title_1"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewTitle1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/title3"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        android:background="#15AA9C"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="left|center_vertical"
-        android:text="@string/title_3"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:backgroundTint="@color/purple_200"
-        app:icon="@android:drawable/ic_menu_close_clear_cancel"
-        app:iconGravity="top"
-        app:iconSize="50sp"
-        app:iconTint="@color/material_on_primary_emphasis_medium"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:ignore="RtlHardcoded" />
+        app:layout_constraintTop_toBottomOf="@+id/title2">
+        <ImageView
+            android:id="@+id/imageViewTitle3"
+            android:layout_width="63dp"
+            android:layout_height="67dp"
+            android:hapticFeedbackEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <TextView
+            android:id="@+id/title3Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/title_3"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewTitle3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title4"
+        android:background="#15AA9C"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title3">
+
+        <ImageView
+            android:id="@+id/imageViewTitle4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:hapticFeedbackEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <TextView
+            android:id="@+id/title4Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/title4"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewTitle4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#15AA9C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title4">
+        <ImageView
+            android:id="@+id/imageViewTitle5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:hapticFeedbackEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <TextView
+            android:id="@+id/title5Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/title5"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewTitle5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title6"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#15AA9C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title5">
+
+        <TextView
+            android:id="@+id/title6Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/title5"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title7"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#15AA9C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title5">
+
+        <ImageView
+            android:id="@+id/imageViewTitle7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:hapticFeedbackEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <TextView
+            android:id="@+id/title7Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/title4"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewTitle7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
