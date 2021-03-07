@@ -1,6 +1,5 @@
 package com.example.calc.part2_calculator
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -8,12 +7,9 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatDelegate
 import com.example.calc.calculator.Calculator
 import kotlinx.android.synthetic.main.activity_calculator.*
 import com.example.calc.R
-import com.example.calc.part8_change_color.ChangeActivityColors
-import com.example.calc.part8_change_color.SwitchStatus
 
 class ActivityCalculator : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,11 +19,6 @@ class ActivityCalculator : AppCompatActivity() {
         supportActionBar?.hide()
         addListenersForAllButton()
         addTextListener()
-        val changeActivityColors: ChangeActivityColors = ChangeActivityColors()
-        if (SwitchStatus.isSwitchButton())
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
     }
 
     /**

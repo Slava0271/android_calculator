@@ -4,9 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.calc.R
 import com.example.calc.part2_calculator.ActivityCalculator
-import com.example.calc.part3_images.ChangeImageColorActivity
+import com.example.calc.part3_images.ChangeColorActivity
 import com.example.calc.part3_images.ImageViewActivity
 import com.example.calc.part4_title.TitleActivity
 import com.example.calc.part8_change_color.ChangeActivityColors
@@ -42,6 +41,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, TitleActivity::class.java))
     }
     private fun toChangeImageColor(){
-        startActivity(Intent(this, ChangeImageColorActivity::class.java))
+        startActivity(Intent(this, ChangeColorActivity::class.java))
     }
 }
