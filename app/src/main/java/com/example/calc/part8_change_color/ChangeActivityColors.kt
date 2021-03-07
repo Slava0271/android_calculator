@@ -11,21 +11,9 @@ class ChangeActivityColors {
         switch.setOnCheckedChangeListener() { _, isChecked ->
             if (isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                //   changeToLightTheme(constraintLayoutMain)
-                SwitchStatus.setIsSwitchButton(true)
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                //  changeToDarkTheme(constraintLayoutMain)
-                SwitchStatus.setIsSwitchButton(false)
             }
         }
-    }
-
-    fun changeToDarkTheme(constraintLayoutMain: ConstraintLayout) {
-        constraintLayoutMain.setBackgroundColor(Color.rgb(21, 21, 21))
-    }
-
-    fun changeToLightTheme(constraintLayoutMain: ConstraintLayout) {
-        constraintLayoutMain.setBackgroundColor(Color.rgb(252, 243, 214))
     }
 }
