@@ -11,9 +11,22 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#FFc8c2af"
+        android:isScrollContainer="true"
+        android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play" />
 
     <ProgressBar
         android:id="@+id/progressBar"
