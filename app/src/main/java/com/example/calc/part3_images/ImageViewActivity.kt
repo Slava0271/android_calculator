@@ -2,7 +2,6 @@ package com.example.calc.part3_images
 
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
-import android.nfc.Tag
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -22,6 +21,8 @@ import java.lang.NullPointerException
 class ImageViewActivity : AppCompatActivity() {
     //A variable that is equal to the position of the selected item of the spinner
     var getPosition = 0
+    var mouseUrl:String="https://www.jax.org/-/media/jaxweb/images/why-the-mouse/mouse.jpg"
+    var goatUrl:String="https://www.gardeningknowhow.com/wp-content/uploads/2010/02/iStock-524907632.jpg"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_image_view)
@@ -62,28 +63,28 @@ class ImageViewActivity : AppCompatActivity() {
     private fun setImagesAndTransformation(count: Int) {
         when (count) {
             0 -> {
-                ViewWithImages.setImageResource(R.drawable.cat)
-                ViewWithImages.tag = Tags.CAT.tag
+                viewWithImages.setImageResource(R.drawable.cat)
+                viewWithImages.tag = Tags.CAT.tag
                 transformation(getPosition)
             }
             1 -> {
-                ViewWithImages.setImageResource(R.drawable.shark)
-                ViewWithImages.tag = Tags.SHARK.tag
+                viewWithImages.setImageResource(R.drawable.shark)
+                viewWithImages.tag = Tags.SHARK.tag
                 transformation(getPosition)
             }
             2 -> {
-                displayImageFromCache(getString(R.string.mouse_img), ViewWithImages)
-                ViewWithImages.tag = Tags.MOUSE.tag
+                displayImageFromCache(mouseUrl, viewWithImages)
+                viewWithImages.tag = Tags.MOUSE.tag
                 transformation(getPosition)
             }
             3 -> {
-                displayImageFromCache(getString(R.string.goat_img), ViewWithImages)
-                ViewWithImages.tag = Tags.GOAT.tag
+                displayImageFromCache(goatUrl, viewWithImages)
+                viewWithImages.tag = Tags.GOAT.tag
                 transformation(getPosition)
             }
             4 -> {
-                ViewWithImages.setImageResource(R.drawable.horse)
-                ViewWithImages.tag = Tags.HORSE.tag
+                viewWithImages.setImageResource(R.drawable.horse)
+                viewWithImages.tag = Tags.HORSE.tag
                 transformation(getPosition)
             }
         }
@@ -107,8 +108,8 @@ class ImageViewActivity : AppCompatActivity() {
      * The method that downloads pictures from the Internet when activating
      */
     private fun loadAllURLFiles() {
-        loadImageFromURL(getString(R.string.mouse_img))
-        loadImageFromURL(getString(R.string.goat_img))
+        loadImageFromURL(mouseUrl)
+        loadImageFromURL(goatUrl)
         progressBar.visibility = ProgressBar.INVISIBLE
     }
 
@@ -131,12 +132,12 @@ class ImageViewActivity : AppCompatActivity() {
     /**
      * A method that returns an image depending on the tag
      */
-    private fun getTag(): Any? {
+    private fun getImage(): Any? {
 
-        when (ViewWithImages.tag) {
+        when (viewWithImages.tag) {
             Tags.CAT.tag -> return R.drawable.cat
-            Tags.MOUSE.tag -> return getString(R.string.mouse_img)
-            Tags.GOAT.tag -> return getString(R.string.goat_img)
+            Tags.MOUSE.tag -> return mouseUrl
+            Tags.GOAT.tag -> return goatUrl
             Tags.SHARK.tag -> return R.drawable.shark
             Tags.HORSE.tag -> return R.drawable.horse
         }
@@ -148,13 +149,13 @@ class ImageViewActivity : AppCompatActivity() {
      * transformation, which is passed to the parameter
      */
     private fun getTransformation(any: Any) {
-        Glide.with(this).load(getTag())
+        Glide.with(this).load(getImage())
                 .apply(RequestOptions.bitmapTransform(any as Transformation<Bitmap>))
-                .into(ViewWithImages)
+                .into(viewWithImages)
     }
 
     private fun noTransformation() {
-        Glide.with(this).load(getTag()).into(ViewWithImages)
+        Glide.with(this).load(getImage()).into(viewWithImages)
     }
 
     /**

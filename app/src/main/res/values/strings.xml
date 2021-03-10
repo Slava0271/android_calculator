@@ -1,6 +1,4 @@
 <resources>
-    <string name="mouse_img">https://www.jax.org/-/media/jaxweb/images/why-the-mouse/mouse.jpg</string>
-    <string name="goat_img">https://www.gardeningknowhow.com/wp-content/uploads/2010/02/iStock-524907632.jpg</string>
     <string name="app_name">Lesson1</string>
     <string name="calculator">Calculator</string>
     <string name="cat">Cat</string>
