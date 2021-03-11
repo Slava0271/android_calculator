@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         changeImageColorButton.setOnClickListener {
             toChangeImageColor()
         }
+        cats_breed.setOnClickListener {
+            toCatBreeds()
+        }
         val changeActivityColors: ChangeActivityColors = ChangeActivityColors()
         changeActivityColors.listenSwitchButton(switchChangeColor,main_activity)
 
@@ -42,5 +45,8 @@ class MainActivity : AppCompatActivity() {
     }
     private fun toChangeImageColor(){
         startActivity(Intent(this, ChangeColorActivity::class.java))
+    }
+    private fun toCatBreeds(){
+        startActivity(Intent(this, CatBreed::class.java))
     }
 }

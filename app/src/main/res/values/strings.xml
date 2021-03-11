@@ -37,6 +37,8 @@
     <string name="title4">title4</string>
     <string name="title6">title6</string>
     <string name="titles">Titles</string>
+    <string name="change_image_color">Change image color</string>
+    <string name="cats_breed">Cats Breed</string>
 
     <string-array name="transformation">
         <item>No transformation</item>

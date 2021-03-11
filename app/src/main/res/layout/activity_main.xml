@@ -80,7 +80,16 @@
                 android:insetLeft="20dp"
                 android:insetTop="100dp"
                 android:insetRight="20dp"
-                android:text="Change image color"
+                android:text="@string/change_image_color"
+                app:backgroundTint="@color/button_color" />
+            <Button
+                android:id="@+id/cats_breed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:insetLeft="20dp"
+                android:insetTop="100dp"
+                android:insetRight="20dp"
+                android:text="@string/cats_breed"
                 app:backgroundTint="@color/button_color" />
 
 
