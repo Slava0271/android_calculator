@@ -7,6 +7,12 @@
     android:orientation="vertical"
     tools:context=".CatBreed">
 
+    <Button
+        android:id="@+id/buttonSetActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_2_columns" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tagsRV"
         android:layout_width="match_parent"

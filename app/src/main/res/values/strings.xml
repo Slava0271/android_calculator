@@ -39,6 +39,8 @@
     <string name="titles">Titles</string>
     <string name="change_image_color">Change image color</string>
     <string name="cats_breed">Cats Breed</string>
+    <string name="_2_columns">2 Columns</string>
+    <string name="_1_column">1 Column</string>
 
     <string-array name="transformation">
         <item>No transformation</item>
