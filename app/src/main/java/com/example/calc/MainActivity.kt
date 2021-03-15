@@ -15,18 +15,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState:Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        changeTheme()
+
         calculator.setOnClickListener {
             toCalculator(calculator)
         }
         images.setOnClickListener {
             toViewActivity(images)
         }
-        changeImageColorButton.setOnClickListener {
+        titleActivity.setOnClickListener {
             toTitles()
         }
         changeImageColorButton.setOnClickListener {
             toChangeImageColor()
         }
+
+    }
+
+    private fun changeTheme(){
         val changeActivityColors: ChangeActivityColors = ChangeActivityColors()
         changeActivityColors.listenSwitchButton(switchChangeColor,main_activity)
 
@@ -43,4 +49,5 @@ class MainActivity : AppCompatActivity() {
     private fun toChangeImageColor(){
         startActivity(Intent(this, ChangeColorActivity::class.java))
     }
+
 }
