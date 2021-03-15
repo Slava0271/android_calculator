@@ -29,6 +29,9 @@ class MainActivity : AppCompatActivity() {
         changeImageColorButton.setOnClickListener {
             toChangeImageColor()
         }
+        cats_breed.setOnClickListener {
+            toCatBreeds()
+        }
 
     }
 
@@ -48,6 +51,9 @@ class MainActivity : AppCompatActivity() {
     }
     private fun toChangeImageColor(){
         startActivity(Intent(this, ChangeColorActivity::class.java))
+    }
+    private fun toCatBreeds(){
+        startActivity(Intent(this, CatBreed::class.java))
     }
 
 }

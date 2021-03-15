@@ -15,6 +15,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.calc.R
 import jp.wasabeef.glide.transformations.*
 import kotlinx.android.synthetic.main.activity_image_view.*
+import kotlinx.android.synthetic.main.tags_item.*
 import java.lang.NullPointerException
 
 
@@ -31,6 +32,7 @@ class ImageViewActivity : AppCompatActivity() {
         loadAllURLFiles()
         buttonListeners()
         addSpinner()
+
 
     }
 
